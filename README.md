@@ -10,7 +10,9 @@ Part 1 :
 
   Forward Propagation Details 
 
-  We can calculate an output from a neural network by propagating an input signal through each layer until the output layer outputs its values.We call this forward-       propagation.We work through each layer of our network calculating the outputs for each neuron. All of the outputs from one layer become inputs to the neurons on the next layer.
+  We can calculate an output from a neural network by propagating an input signal through each layer until the output layer .We call this forward- propagation.We work through each layer of our network calculating the outputs for each neuron. All of the outputs from one layer become inputs to the neurons on the next layer.
+  
+Details Mathematical Calculation as below :
 
     input1=i1
     input2=i2
@@ -34,6 +36,7 @@ Part 1 :
   
    The backpropagation algorithm is named for the way in which weights are trained.Error is calculated between the actual outputs labels and the outputs labels forward propagated from the network. These errors are then propagated backward through the network from the output layer to the hidden layer, updating weights as they go.
 
+Details Mathematical Calculation as below :
 
     dsigmoid(x)/dx=sigmoid(x)*(1-sigmoid(x))
     dEtotal/dw5= d(E1+E2)/dw5= dE1/dact_o1*dact_o1/do1*do1/dw5	
