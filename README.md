@@ -26,10 +26,11 @@ Part 1 :
     E2=1/2*(t2 - act_o2)2
     E_total=E1+E2
     sigmoid(x)=(1/1+exp(-x))
-    dsigmoid(x)/dx=sigmoid(x)*(1-sigmoid(x))
+
 
   Back Propagation Details
 
+    dsigmoid(x)/dx=sigmoid(x)*(1-sigmoid(x))
     dEtotal/dw5= d(E1+E2)/dw5= dE1/dact_o1*dact_o1/do1*do1/dw5	
     dE1/dact_o1=0.5*2*(t1 - act_o1)*-1 =act_o1 - t1		
     dact_o1/do1=dsigmoid(o1)/do1 =  act_o1 * (1-act_o1)		
