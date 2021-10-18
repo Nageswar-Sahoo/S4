@@ -133,6 +133,122 @@ Error graph with Learning Rate 2
 
 
 
+Part 2 : 
+  
+  Design the model architecture for MNIST with following constraint :
+    
+    99.4% validation accuracy
+    Less than 20k Parameters
+    You can use anything from above you want. 
+    Less than 20 Epochs
+    Have used BN, Dropout, a Fully connected layer, have used GAP. 
+ 
+ Model Architecture 1 : With Linear layer at the last layer 
+
+         
+          Layer (type)               Output Shape         Param #
+         
+            Conv2d-1           [-1, 32, 26, 26]             320
+       BatchNorm2d-2           [-1, 32, 26, 26]              64
+         MaxPool2d-3           [-1, 32, 13, 13]               0
+            Conv2d-4           [-1, 32, 11, 11]           9,248
+       BatchNorm2d-5           [-1, 32, 11, 11]              64
+         MaxPool2d-6             [-1, 32, 5, 5]               0
+            Conv2d-7             [-1, 16, 3, 3]           4,624
+       BatchNorm2d-8             [-1, 16, 3, 3]              32
+           Dropout-9             [-1, 16, 3, 3]               0
+           Linear-10                   [-1, 20]           2,900
+      BatchNorm1d-11                   [-1, 20]              40
+          Dropout-12                   [-1, 20]               0
+           Linear-13                   [-1, 10]             210
+
+   
+     Total params: 17,502
+     Trainable params: 17,502
+     Non-trainable params: 0
+     Input size (MB): 0.00
+     Forward/backward pass size (MB): 0.44
+     Params size (MB): 0.07
+     Estimated Total Size (MB): 0.51
+
+     Training Logs :
+          
+          
+
+          loss=0.11460938304662704 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.27it/s]
+          
+          Test set: Average loss: 0.0748, Accuracy: 9829/10000 (98.29000%)
+
+          loss=0.04542025923728943 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.46it/s]
+
+          Test set: Average loss: 0.0482, Accuracy: 9870/10000 (98.70000%)
+
+          loss=0.029887935146689415 batch_id=468: 100%|██████████| 469/469 [00:18<00:00, 24.80it/s]
+
+          Test set: Average loss: 0.0348, Accuracy: 9893/10000 (98.93000%)
+
+          loss=0.07188840210437775 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.31it/s]
+
+          Test set: Average loss: 0.0334, Accuracy: 9903/10000 (99.03000%)
+
+          oss=0.030564427375793457 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.36it/s]
+
+          Test set: Average loss: 0.0317, Accuracy: 9901/10000 (99.01000%)
+
+          loss=0.04231233894824982 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.51it/s]
+
+          Test set: Average loss: 0.0299, Accuracy: 9906/10000 (99.06000%)
+
+          loss=0.0220263060182333 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.58it/s]
+
+          Test set: Average loss: 0.0282, Accuracy: 9912/10000 (99.12000%)
+
+          loss=0.06818337738513947 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.27it/s]
+
+          Test set: Average loss: 0.0308, Accuracy: 9904/10000 (99.04000%)
+
+          loss=0.008004291914403439 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.28it/s]
+
+          Test set: Average loss: 0.0241, Accuracy: 9929/10000 (99.29000%)
+
+          loss=0.09412095695734024 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.14it/s]
+
+          Test set: Average loss: 0.0258, Accuracy: 9923/10000 (99.23000%)
+
+          loss=0.02752997726202011 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.50it/s]
+
+          Test set: Average loss: 0.0248, Accuracy: 9920/10000 (99.20000%)
+
+          loss=0.017845870926976204 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.33it/s]
+
+          Test set: Average loss: 0.0278, Accuracy: 9914/10000 (99.14000%)
+
+          loss=0.011509638279676437 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.40it/s]
+
+          Test set: Average loss: 0.0274, Accuracy: 9915/10000 (99.15000%)
+
+           loss=0.008964160457253456 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.59it/s]
+
+          Test set: Average loss: 0.0259, Accuracy: 9918/10000 (99.18000%)
+
+          loss=0.004373638425022364 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.35it/s]
+
+          Test set: Average loss: 0.0241, Accuracy: 9931/10000 (99.31000%)
+
+          loss=0.004581995774060488 batch_id=468: 100%|██████████| 469/469 [00:18<00:00, 24.75it/s]
+
+          Test set: Average loss: 0.0270, Accuracy: 9918/10000 (99.18000%)
+
+          loss=0.0323546826839447 batch_id=468: 100%|██████████| 469/469 [00:19<00:00, 24.62it/s]
+
+          Test set: Average loss: 0.0262, Accuracy: 9923/10000 (99.23000%)
+      
+
+        Highest Accuracy with above architecture is aroung 99.2 to 99.3  
+   
+
+ Model Architecture 1 : Without Linear layer at the last layer 
+
 
       
   
