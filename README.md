@@ -136,7 +136,10 @@ Error graph with Learning Rate 2
 ----------------------------------------------------PART- 2 -------------------------------------------------------------------------------------------------
 
 
+Data Overview
+MNIST ("Modified National Institute of Standards and Technology") dataset of computer vision. The MNIST database contains 60,000 training images and 10,000 testing images. Half of the training set and half of the test set were taken from NIST's training dataset, while the other half of the training set and the other half of the test set were taken from NIST's testing dataset.This project implements a beginner classification task on MNIST dataset with a Convolutional Neural Network(CNN) model.
 
+![image](https://user-images.githubusercontent.com/70502759/137764343-c1134fa1-94d2-40b0-bf21-dcd78b3ed4e1.png)
   
   Design the model architecture for MNIST with following constraint :
     
@@ -245,10 +248,9 @@ Error graph with Learning Rate 2
 
           Test set: Average loss: 0.0262, Accuracy: 9923/10000 (99.23000%)
       
-
+        Result 
         Highest Accuracy with above architecture is around 99.2 to 99.3  
    
-
  Model Architecture 2 : Without Linear NN at the last layer 
 
 
@@ -357,5 +359,7 @@ Error graph with Learning Rate 2
 
     Test set: Average loss: 0.0390, Accuracy: 9919/10000 (99.19000%)
 
+    Result 
+        Highest Accuracy with above architecture is around 99.10 to 99.19  
   
 
