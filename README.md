@@ -249,9 +249,8 @@ Part 2 :
  Model Architecture 1 : Without Linear NN at the last layer 
 
 
-      
         Layer (type)               Output Shape         Param #
-
+      
             Conv2d-1           [-1, 16, 26, 26]             160
        BatchNorm2d-2           [-1, 16, 26, 26]              32
             Conv2d-3           [-1, 32, 24, 24]           4,640
@@ -259,21 +258,23 @@ Part 2 :
          MaxPool2d-5           [-1, 32, 12, 12]               0
             Conv2d-6           [-1, 10, 10, 10]           2,890
        BatchNorm2d-7           [-1, 10, 10, 10]              20
-         MaxPool2d-8             [-1, 10, 5, 5]               0
-            Conv2d-9             [-1, 10, 3, 3]             910
-          Dropout-10             [-1, 10, 3, 3]               0
-           Conv2d-11             [-1, 10, 1, 1]             910
-          Dropout-12             [-1, 10, 1, 1]               0
-    
+           Dropout-8           [-1, 10, 10, 10]               0
+         MaxPool2d-9             [-1, 10, 5, 5]               0
+           Conv2d-10             [-1, 10, 3, 3]             910
+          Dropout-11             [-1, 10, 3, 3]               0
+           Conv2d-12             [-1, 10, 1, 1]             910
+
+
     Total params: 9,626
     Trainable params: 9,626
     Non-trainable params: 0
     Input size (MB): 0.00
-    Forward/backward pass size (MB): 0.50
+    Forward/backward pass size (MB): 0.51
     Params size (MB): 0.04
-    Estimated Total Size (MB): 0.54
+    Estimated Total Size (MB): 0.55
 
-Training Logs :
+
+  Training Logs :
 
 
 
@@ -355,8 +356,3 @@ Training Logs :
 
   
 
-
-
-      
-  
-  
