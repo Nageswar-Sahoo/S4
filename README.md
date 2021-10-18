@@ -246,7 +246,7 @@ Part 2 :
         Highest Accuracy with above architecture is around 99.2 to 99.3  
    
 
- Model Architecture 1 : Without Linear NN at the last layer 
+ Model Architecture 2 : Without Linear NN at the last layer 
 
 
         Layer (type)               Output Shape         Param #
