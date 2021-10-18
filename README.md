@@ -82,14 +82,14 @@ Details Mathematical Calculation as below :
     dEtotal/dw7 = (act_o2 - t2)*act_o2*(1-act_o2)*act_h1 						
     dEtotal/dw8 = (act_o2 - t2)*act_o2*(1-act_o2)*act_h2
     
-    w1=old_w1 - learning_rate * dEtotal/dw1
-    w1=old_w2 - learning_rate * dEtotal/dw2
-    w1=old_w3 - learning_rate * dEtotal/dw3
-    w1=old_w4 - learning_rate * dEtotal/dw4
-    w1=old_w5 - learning_rate * dEtotal/dw5
-    w1=old_w6 - learning_rate * dEtotal/dw6
-    w1=old_w7 - learning_rate * dEtotal/dw7
-    w1=old_w8 - learning_rate * dEtotal/dw8
+    w1 = old_w1 - learning_rate * dEtotal/dw1
+    w2 = old_w2 - learning_rate * dEtotal/dw2
+    w3 = old_w3 - learning_rate * dEtotal/dw3
+    w4 = old_w4 - learning_rate * dEtotal/dw4
+    w5 = old_w5 - learning_rate * dEtotal/dw5
+    w6 = old_w6 - learning_rate * dEtotal/dw6
+    w7 = old_w7 - learning_rate * dEtotal/dw7
+    w8 = old_w8 - learning_rate * dEtotal/dw8
 
 Image from Excel 
 
