@@ -139,11 +139,10 @@ Part 2 :
     
     99.4% validation accuracy
     Less than 20k Parameters
-    You can use anything from above you want. 
     Less than 20 Epochs
     Have used BN, Dropout, a Fully connected layer, have used GAP. 
  
- Model Architecture 1 : With Linear layer at the last layer 
+ Model Architecture 1 : With Linear NN at the last layer  
 
          
           Layer (type)               Output Shape         Param #
@@ -244,10 +243,118 @@ Part 2 :
           Test set: Average loss: 0.0262, Accuracy: 9923/10000 (99.23000%)
       
 
-        Highest Accuracy with above architecture is aroung 99.2 to 99.3  
+        Highest Accuracy with above architecture is around 99.2 to 99.3  
    
 
- Model Architecture 1 : Without Linear layer at the last layer 
+ Model Architecture 1 : Without Linear NN at the last layer 
+
+
+      
+        Layer (type)               Output Shape         Param #
+
+            Conv2d-1           [-1, 16, 26, 26]             160
+       BatchNorm2d-2           [-1, 16, 26, 26]              32
+            Conv2d-3           [-1, 32, 24, 24]           4,640
+       BatchNorm2d-4           [-1, 32, 24, 24]              64
+         MaxPool2d-5           [-1, 32, 12, 12]               0
+            Conv2d-6           [-1, 10, 10, 10]           2,890
+       BatchNorm2d-7           [-1, 10, 10, 10]              20
+         MaxPool2d-8             [-1, 10, 5, 5]               0
+            Conv2d-9             [-1, 10, 3, 3]             910
+          Dropout-10             [-1, 10, 3, 3]               0
+           Conv2d-11             [-1, 10, 1, 1]             910
+          Dropout-12             [-1, 10, 1, 1]               0
+    
+    Total params: 9,626
+    Trainable params: 9,626
+    Non-trainable params: 0
+    Input size (MB): 0.00
+    Forward/backward pass size (MB): 0.50
+    Params size (MB): 0.04
+    Estimated Total Size (MB): 0.54
+
+Training Logs :
+
+
+
+    loss=0.46433839201927185 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 31.39it/s]
+
+    Test set: Average loss: 0.1001, Accuracy: 9772/10000 (97.72000%)
+
+    loss=0.08626820892095566 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 31.35it/s]
+
+    Test set: Average loss: 0.0743, Accuracy: 9832/10000 (98.32000%)
+
+    loss=0.3429888188838959 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 31.42it/s]
+
+    Test set: Average loss: 0.0626, Accuracy: 9860/10000 (98.60000%)
+
+    loss=0.18460418283939362 batch_id=937: 100%|██████████| 938/938 [00:30<00:00, 31.03it/s]
+
+    Test set: Average loss: 0.0694, Accuracy: 9841/10000 (98.41000%)
+
+    loss=0.649048388004303 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 31.73it/s]
+
+    Test set: Average loss: 0.0527, Accuracy: 9882/10000 (98.82000%)
+
+    loss=0.30559906363487244 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 31.59it/s]
+
+    Test set: Average loss: 0.0501, Accuracy: 9875/10000 (98.75000%)
+
+    loss=0.19007930159568787 batch_id=937: 100%|██████████| 938/938 [00:30<00:00, 31.16it/s]
+
+    Test set: Average loss: 0.0476, Accuracy: 9893/10000 (98.93000%)
+
+    loss=0.3587135672569275 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 31.71it/s]
+
+    Test set: Average loss: 0.0460, Accuracy: 9900/10000 (99.00000%)
+
+    loss=0.17629261314868927 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 31.55it/s]
+
+    Test set: Average loss: 0.0427, Accuracy: 9901/10000 (99.01000%)
+
+    loss=0.25937575101852417 batch_id=937: 100%|██████████| 938/938 [00:30<00:00, 31.21it/s]
+
+    Test set: Average loss: 0.0453, Accuracy: 9899/10000 (98.99000%)
+
+    loss=0.23561449348926544 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 31.38it/s]
+
+    Test set: Average loss: 0.0394, Accuracy: 9913/10000 (99.13000%)
+
+    loss=0.38856634497642517 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 32.01it/s]
+
+    Test set: Average loss: 0.0466, Accuracy: 9901/10000 (99.01000%)
+
+    loss=0.32567137479782104 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 32.18it/s]
+
+    Test set: Average loss: 0.0397, Accuracy: 9915/10000 (99.15000%)
+
+    loss=0.16761580109596252 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 32.12it/s]
+
+    Test set: Average loss: 0.0379, Accuracy: 9918/10000 (99.18000%)
+
+    loss=0.05048885568976402 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 31.63it/s]
+
+    Test set: Average loss: 0.0382, Accuracy: 9914/10000 (99.14000%)
+
+    loss=0.2934759259223938 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 32.15it/s]
+
+    Test set: Average loss: 0.0484, Accuracy: 9883/10000 (98.83000%)
+
+    loss=0.6970977783203125 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 32.03it/s]
+
+    Test set: Average loss: 0.0413, Accuracy: 9905/10000 (99.05000%)
+
+    loss=0.2091989666223526 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 31.96it/s]
+
+    Test set: Average loss: 0.0450, Accuracy: 9906/10000 (99.06000%)
+
+    loss=0.08812602609395981 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 31.89it/s]
+
+    Test set: Average loss: 0.0390, Accuracy: 9919/10000 (99.19000%)
+
+  
+
 
 
       
