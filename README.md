@@ -133,14 +133,17 @@ Error graph with Learning Rate 2
 
 
 
-----------------------------------------------------PART- 2 -------------------------------------------------------------------------------------------------
+----------------------------------------------------PART- 2 -----------------------------------------------------
 
 
 Data Overview
 
+
 MNIST ("Modified National Institute of Standards and Technology") dataset of computer vision. The MNIST database contains 60,000 training images and 10,000 testing images. Half of the training set and half of the test set were taken from NIST's training dataset, while the other half of the training set and the other half of the test set were taken from NIST's testing dataset.This project implements a beginner classification task on MNIST dataset with a Convolutional Neural Network(CNN) model.
 
 ![image](https://user-images.githubusercontent.com/70502759/137764343-c1134fa1-94d2-40b0-bf21-dcd78b3ed4e1.png)
+  
+  This project will automatically dowload and process the MNIST dataset
   
   Design the model architecture for MNIST with following constraint :
     
@@ -149,7 +152,7 @@ MNIST ("Modified National Institute of Standards and Technology") dataset of com
     Less than 20 Epochs
     Have used BN, Dropout, a Fully connected layer, have used GAP. 
  
- Model Architecture 1 : With Linear NN at the last layer  
+ Model Architecture 1 : With CNN and Linear NN at the last layer  
 
          
           Layer (type)               Output Shape         Param #
@@ -252,7 +255,7 @@ MNIST ("Modified National Institute of Standards and Technology") dataset of com
         Result 
         Highest Accuracy with above architecture is around 99.2 to 99.3  
    
- Model Architecture 2 : Without Linear NN at the last layer 
+ Model Architecture 2 : With CNN Only  
 
 
         Layer (type)               Output Shape         Param #
@@ -280,9 +283,7 @@ MNIST ("Modified National Institute of Standards and Technology") dataset of com
     Estimated Total Size (MB): 0.55
 
 
-  Training Logs :
-
-
+    Training Logs :
 
     loss=0.46433839201927185 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 31.39it/s]
 
@@ -360,7 +361,9 @@ MNIST ("Modified National Institute of Standards and Technology") dataset of com
 
     Test set: Average loss: 0.0390, Accuracy: 9919/10000 (99.19000%)
 
-    Result 
-        Highest Accuracy with above architecture is around 99.10 to 99.19  
-  
+      Result 
 
+      Highest Accuracy with above architecture is around 99.10 to 99.19  
+
+
+      
