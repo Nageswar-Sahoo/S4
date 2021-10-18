@@ -1,7 +1,9 @@
 
 # S4
 
-Part 1 :
+----------------------------------------------------PART- 1 -----------------------------------------------------
+
+
 
   Neural Network Architecture 
  
@@ -134,7 +136,6 @@ Error graph with Learning Rate 2
 
 
 ----------------------------------------------------PART- 2 -----------------------------------------------------
-
 
 Data Overview
 
@@ -367,3 +368,8 @@ MNIST ("Modified National Institute of Standards and Technology") dataset of com
 
 
       
+## Tech Stack
+
+Client: Python, Pytorch, Numpy
+
+  
