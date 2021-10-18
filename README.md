@@ -133,7 +133,10 @@ Error graph with Learning Rate 2
 
 
 
-Part 2 : 
+----------------------------------------------------PART- 2 -------------------------------------------------------------------------------------------------
+
+
+
   
   Design the model architecture for MNIST with following constraint :
     
